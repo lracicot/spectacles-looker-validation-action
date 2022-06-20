@@ -4,16 +4,18 @@ description: 'Validates Lookml with spectacles-ci'
 author: 'Louis Racicot'
 inputs:
   validator:
-    description: 'Base url of the looker instance'
+    description: 'sql | content | assert | lookml'
     required: true
   lookml_project:
-    description: 'API3 client_id'
+    description: 'The name of the Lookml project'
     required: true
   branch:
-    description: 'API3 client_secret'
+    description: 'The git branch to validate in the Lookml project'
     required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.who-to-greet }}
+    - ${{ inputs.validator }}
+    - ${{ inputs.lookml_project }}
+    - ${{ inputs.branch }}
