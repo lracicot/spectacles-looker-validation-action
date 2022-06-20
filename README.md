@@ -23,7 +23,7 @@ None
 ## Example usage
 
 ```
-uses: lracicot/hello-world-docker-action@v1
+uses: lracicot/spectacles-looker-validation-action@v1
 env:
   - LOOKER_BASE_URL: https://my-instance.cloud.looker.com
   - LOOKER_CLIENT_ID: ${{ secrets.LOOKER_CLIENT_ID }}
